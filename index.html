@@ -2161,3 +2161,18 @@ var I18N = {
       scIndex = (i + scSlides.length) % scSlides.length;
       scSlides.forEach(function(s, si){ s.classList.toggle('is-active', si === scIndex); });
       scDots.forEach(function(d, di){
+        d.classList.toggle('on', di === scIndex);
+        d.setAttribute('aria-selected', String(di === scIndex));
+      });
+      scLayout();
+    }
+    scPrev.addEventListener('click', function(){ scGo(scIndex - 1); });
+    scNext.addEventListener('click', function(){ scGo(scIndex + 1); });
+    scDots.forEach(function(d, di){ d.addEventListener('click', function(){ scGo(di); }); });
+    window.addEventListener('resize', scLayout);
+    scGo(0);
+  }
+})();
+</script>
+</body>
+</html>
