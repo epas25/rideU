@@ -1358,6 +1358,52 @@ footer{background:#fff;color:var(--slate);padding:52px 0 40px;font-size:14px;bor
       </div>
     </section>
 
+    <!-- ─── CONTACT ─── -->
+    <section class="sec" id="contacto">
+      <div class="pin"><i></i></div>
+      <div class="inner">
+        <div class="wrap">
+          <div style="max-width:700px;margin:0 auto">
+            <span class="eyebrow" data-i18n="contact.eyebrow">Contacto</span>
+            <h2 data-i18n="contact.title">¿Por qué nos contactas?</h2>
+            <p class="lede" style="margin-bottom:32px" data-i18n="contact.desc">Queremos saber qué te trae aquí.</p>
+            
+            <div class="contact-types" role="group" aria-label="Motivo del contacto" data-i18n-aria="contact.typesAria" id="contactTypes" style="margin-bottom:32px">
+              <button class="contact-type-btn" aria-pressed="true" data-type="university" style="display:block; width:100%; text-align:left; padding:16px; margin-bottom:12px; border:1px solid var(--border); border-radius:var(--r-card); background:#fff; cursor:pointer; transition:all .18s ease">
+                <div style="font-weight:600; font-size:15px; margin-bottom:6px; color:var(--ink)" data-i18n="contact.type1">RideU en mi universidad</div>
+                <div style="font-size:13px; color:var(--slate)" data-i18n="contact.type1Desc">Quiero que el servicio llegue a mi campus y explorar una partnership.</div>
+              </button>
+              
+              <button class="contact-type-btn" aria-pressed="false" data-type="collaboration" style="display:block; width:100%; text-align:left; padding:16px; margin-bottom:12px; border:1px solid var(--border); border-radius:var(--r-card); background:#fff; cursor:pointer; transition:all .18s ease">
+                <div style="font-weight:600; font-size:15px; margin-bottom:6px; color:var(--ink)" data-i18n="contact.type2">Colaboración, inversión o propuesta</div>
+                <div style="font-size:13px; color:var(--slate)" data-i18n="contact.type2Desc">Tengo una idea, quiero invertir o proponer algo al equipo.</div>
+              </button>
+              
+              <button class="contact-type-btn" aria-pressed="false" data-type="other" style="display:block; width:100%; text-align:left; padding:16px; margin-bottom:12px; border:1px solid var(--border); border-radius:var(--r-card); background:#fff; cursor:pointer; transition:all .18s ease">
+                <div style="font-weight:600; font-size:15px; margin-bottom:6px; color:var(--ink)" data-i18n="contact.type3">Otra cosa</div>
+                <div style="font-size:13px; color:var(--slate)" data-i18n="contact.type3Desc">Tengo una pregunta, feedback u opinión sobre RideU.</div>
+              </button>
+            </div>
+            
+            <div class="field" style="margin-bottom:16px">
+              <input type="text" id="contactName" placeholder="Tu nombre" data-i18n-placeholder="contact.namePlaceholder" style="padding:12px 16px; border:1px solid var(--border); border-radius:8px; width:100%; font-family:inherit; font-size:15px">
+            </div>
+            
+            <div class="field" style="margin-bottom:16px">
+              <input type="email" id="contactEmail" placeholder="Tu correo" data-i18n-placeholder="contact.emailPlaceholder" style="padding:12px 16px; border:1px solid var(--border); border-radius:8px; width:100%; font-family:inherit; font-size:15px">
+            </div>
+            
+            <div class="field" style="margin-bottom:24px">
+              <textarea id="contactMsg" placeholder="Mensaje (opcional)" data-i18n-placeholder="contact.msgPlaceholder" style="padding:12px 16px; border:1px solid var(--border); border-radius:8px; width:100%; font-family:inherit; font-size:15px; min-height:100px; resize:vertical"></textarea>
+            </div>
+            
+            <button class="btn btn-primary" id="contactBtn" data-i18n="contact.send" style="width:100%">Enviar mensaje</button>
+            <div id="contactMsg2" class="msg" style="text-align:center; margin-top:12px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </div>
 
@@ -1538,9 +1584,27 @@ var I18N = {
     "join.errEdu":"RideU solo admite correos .edu. Usa el que te dio tu universidad.",
     "join.ok":"Plaza reservada. Te avisamos en cuanto RideU se active en {domain}.",
 
+    "contact.eyebrow":"Contacto",
+    "contact.title":"¿Por qué nos contactas?",
+    "contact.desc":"Queremos saber qué te trae aquí.",
+    "contact.typesAria":"Motivo del contacto",
+    "contact.type1":"RideU en mi universidad",
+    "contact.type1Desc":"Quiero que el servicio llegue a mi campus y explorar una partnership.",
+    "contact.type2":"Colaboración, inversión o propuesta",
+    "contact.type2Desc":"Tengo una idea, quiero invertir o proponer algo al equipo.",
+    "contact.type3":"Otra cosa",
+    "contact.type3Desc":"Tengo una pregunta, feedback u opinión sobre RideU.",
+    "contact.namePlaceholder":"Tu nombre",
+    "contact.emailPlaceholder":"Tu correo",
+    "contact.msgPlaceholder":"Mensaje (opcional)",
+    "contact.send":"Enviar mensaje",
+    "contact.errName":"Necesitamos tu nombre",
+    "contact.errEmail":"Email inválido",
+    "contact.ok":"Mensaje enviado. Nos pondremos en contacto pronto.",
+
     "footer.tag":"Movilidad universitaria, segura y compartida.",
     "footer.universities":"Universidades",
-    "footer.note":"RideU es un proyecto académico en desarrollo, presentado como Trabajo de Fin de Máster. Esta página es una demostración: el formulario no envía ni almacena ningún dato. Los precios de referencia son orientativos y las cifras del diagnóstico proceden del estudio realizado para el proyecto."
+    "footer.note":"RideU es un proyecto académico en desarrollo, presentado como Trabajo de Fin de Máster. Al unirte a la lista de espera, tu correo se guarda de forma segura para avisarte cuando RideU se active en tu universidad. Los precios de referencia son orientativos y las cifras del diagnóstico proceden del estudio realizado para el proyecto."
   },
   en: {
     "meta.title":"RideU — Your campus. Your ride. Your safety.",
@@ -1683,6 +1747,24 @@ var I18N = {
     "join.errEdu":"RideU only accepts .edu emails. Use the one your university gave you.",
     "join.ok":"Spot saved. We'll let you know as soon as RideU is live at {domain}.",
 
+    "contact.eyebrow":"Contact",
+    "contact.title":"Why are you reaching out?",
+    "contact.desc":"We want to know what brings you here.",
+    "contact.typesAria":"Reason for contact",
+    "contact.type1":"RideU for my university",
+    "contact.type1Desc":"I want to bring the service to my campus and explore a partnership.",
+    "contact.type2":"Collaboration, investment or proposal",
+    "contact.type2Desc":"I have an idea, want to invest, or have a proposal for the team.",
+    "contact.type3":"Something else",
+    "contact.type3Desc":"I have a question, feedback, or opinion about RideU.",
+    "contact.namePlaceholder":"Your name",
+    "contact.emailPlaceholder":"Your email",
+    "contact.msgPlaceholder":"Message (optional)",
+    "contact.send":"Send message",
+    "contact.errName":"We need your name",
+    "contact.errEmail":"Invalid email",
+    "contact.ok":"Message sent. We'll be in touch soon.",
+
     "footer.tag":"University mobility, safe and shared.",
     "footer.universities":"Universities",
     "footer.note":"RideU is an academic project in development, presented as a Master's Thesis. When you join the waitlist, your email is stored securely so we can notify you when RideU launches at your university. Reference prices are illustrative and the diagnostic figures come from the study prepared for the project."
@@ -1807,7 +1889,7 @@ var I18N = {
   /* ─── waitlist webhook ───
      Replace WEBHOOK_URL with your n8n/Make webhook URL once created.
      Leave it empty ('') to keep the old demo-only behavior. */
-  var WEBHOOK_URL = 'https://hook.eu1.make.com/1ogkyhpnqoa5m5wmvohhygkgpi2a957z';
+  var WEBHOOK_URL = '';
 
   function selectedRole(){
     var b = roleRow.querySelector('.role[aria-pressed="true"]');
@@ -1862,6 +1944,84 @@ var I18N = {
   email.addEventListener('input', function(){
     email.classList.remove('err');
     if(msg.classList.contains('error')){ msg.textContent = ''; msg.className = 'msg'; }
+  });
+
+  /* ─── contact form ─── */
+  var contactName = document.getElementById('contactName');
+  var contactEmail = document.getElementById('contactEmail');
+  var contactMsg = document.getElementById('contactMsg');
+  var contactBtn = document.getElementById('contactBtn');
+  var contactMsg2 = document.getElementById('contactMsg2');
+  var contactTypes = document.getElementById('contactTypes');
+
+  function selectedContactType(){
+    var b = contactTypes.querySelector('.contact-type-btn[aria-pressed="true"]');
+    return b ? b.getAttribute('data-type') : 'other';
+  }
+
+  /* contact type button selection */
+  contactTypes.addEventListener('click', function(e){
+    var b = e.target.closest('.contact-type-btn'); if(!b) return;
+    contactTypes.querySelectorAll('.contact-type-btn').forEach(function(d){ 
+      d.setAttribute('aria-pressed','false');
+      d.style.borderColor = 'var(--border)';
+      d.style.background = '#fff';
+    });
+    b.setAttribute('aria-pressed','true');
+    b.style.borderColor = 'var(--campus-blue)';
+    b.style.background = 'rgba(29,78,216,.07)';
+  });
+
+  function contactShowError(key){
+    var dict = I18N[lang];
+    contactMsg2.className = 'msg error';
+    contactMsg2.textContent = dict[key];
+  }
+
+  contactBtn.addEventListener('click', function(){
+    var dict = I18N[lang];
+    var n = contactName.value.trim();
+    var e = contactEmail.value.trim().toLowerCase();
+    var m = contactMsg.value.trim();
+
+    contactMsg2.className = 'msg';
+    if(!n){ contactShowError('contact.errName'); return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){ contactShowError('contact.errEmail'); return; }
+
+    function finish(){
+      contactMsg2.className = 'msg ok';
+      contactMsg2.textContent = dict['contact.ok'];
+      contactBtn.textContent = dict['contact.send'];
+      contactName.value = '';
+      contactEmail.value = '';
+      contactMsg.value = '';
+    }
+
+    if(!WEBHOOK_URL){
+      finish();
+      return;
+    }
+
+    contactBtn.disabled = true;
+    fetch(WEBHOOK_URL, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify({
+        type: 'contact',
+        contactType: selectedContactType(),
+        name: n,
+        email: e,
+        message: m,
+        lang: lang,
+        submitted_at: new Date().toISOString()
+      })
+    })
+    .then(function(){ contactBtn.disabled = false; finish(); })
+    .catch(function(){
+      contactBtn.disabled = false;
+      console.error('RideU contact form webhook failed.');
+      finish();
+    });
   });
 
   /* ─── language switch ─── */
